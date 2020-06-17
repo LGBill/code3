@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* function extract(str,param){
+             var arr1=str.split("?")[1]
+             var arr2=arr1.split("&")
+             var arr3=[];
+             //console.log(arr1);
+             //console.log(arr2);
+             for(var i = 0 ; i < arr2.length ; i++){
+                 //console.log(arr2[i]);
+                 var obj = arr2[i].split('=');
+                 //console.log(obj)
+                 if(obj[0] == param)
+                     //console.log(obj[1]);
+                     arr3.push(obj[1]);
+             }
+             //console.log(arr3);
+             if(arr3 == 0){
+                 console.log('null')
+             }else{
+                 console.log(arr3)
+             }
+         }
+
+         extract('http：//www.58.com?a=123&a=222&a=3321&b=4','c') */
+
+         function random(len, start, end) {
+        　　var arr = [];
+        　　function _inner(start, end) {
+        　　　　var span = end - start;
+        　　　　return parseInt(Math.random() * span + start)
+        　　}
+        　　while (arr.length < len) {
+        　　　　var num = _inner(start, end);
+    　　　　　　if (arr.indexOf(num) == -1) {
+    　　　　　　　　arr.push(num);
+    　　　　　　}
+    　　　　}
+        　　return arr;
+        　}
+          console.log(random(10,10,100));
+    </script>
+</body>
+</html>
